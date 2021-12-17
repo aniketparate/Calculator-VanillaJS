@@ -1,0 +1,151 @@
+:root{
+    --primary-color: linear-gradient(to left top, #08a9ea, #0095ed, #007fed, #0067e8, #004adc, #383cd4, #5129cb, #6405c0, #7f00bd, #9502ba, #a90bb8, #ba18b5);
+    --button-color: #7fffd4
+}
+
+body{
+    background-image: var(--primary-color);
+    height: 100vh;
+}
+
+header{
+    font-size: 60px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.display{
+    background-color: #00000025;
+    padding: 0.75rem;
+    text-align: right;
+    border-radius: 15px;
+    margin: 0.5rem;
+    font-size: 30px;
+    box-shadow: 10px -10px 10px 1px rgba(255, 255, 255, 0.2);
+}
+
+button{
+    height: 75px;
+    width: 75px;
+    margin: 0.5rem;
+    font-size: calc(1rem * 1.2 * 1.2);
+    box-shadow: 10px -10px 3px 1px rgba(3, 3, 3, 0.2);
+}
+
+button:hover{
+    background-color: var(--button-color);
+    transform: translate3d(-4px, 4px, 20px);
+}
+
+.btn{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-areas: 
+        "seven eight nine multiply ."
+        "four five six divide ."
+        "one two three minus clear"
+        "decimal zero equal plus clear";
+}
+
+.one{
+    grid-area: one;
+}
+
+.two{
+    grid-area: two;
+}
+
+.three{
+    grid-area: three;
+}
+
+.four{
+    grid-area: four;
+}
+
+.five{
+    grid-area: five;
+}
+
+.six{
+    grid-area: six;
+}
+
+.seven{
+    grid-area: seven;
+}
+
+.eight{
+    grid-area: eight;
+}
+
+.nine{
+    grid-area: nine;
+}
+
+.zero{
+    grid-area: zero;
+}
+
+.plus{
+    grid-area: plus;
+}
+
+.minus{
+    grid-area: minus;
+}
+
+.divide{
+    grid-area: divide;
+}
+
+.multiply{
+    grid-area: multiply;
+}
+
+.decimal{
+    grid-area: decimal;
+}
+
+.equal{
+    grid-area: equal;
+}
+
+.clear{
+    grid-area: clear;
+    height: 170px;
+}
+
+footer{
+    font-size: 20px;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    header{
+        padding: 0.5rem;
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    button{
+        height: 55px;
+        width: 55px;
+        margin: 0.25;
+    }
+
+    button:focus{
+        background-color: var(--button-color);
+        transform: translate3d(-4px, 4px, 20px);
+    }
+
+    .clear{
+        height: auto;
+    }
+}
