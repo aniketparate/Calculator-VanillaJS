@@ -1,15 +1,23 @@
 :root{
     --primary-color: linear-gradient(to left top, #08a9ea, #0095ed, #007fed, #0067e8, #004adc, #383cd4, #5129cb, #6405c0, #7f00bd, #9502ba, #a90bb8, #ba18b5);
-    --button-color: #7fffd4
+    --button-color: #7fffd4;
+    --clear-button-color: #ff6347;
+    --operation-button: #9c9a9a;
+    --default-color:  #fff;
+}
+
+html{
+    min-height: 100%;
 }
 
 body{
     background-image: var(--primary-color);
-    height: 100vh;
+    min-height: 100%;
 }
 
 header{
-    font-size: 60px;
+    font-size: 50px;
+    color: var(--default-color);
     padding: 1rem;
     text-align: center;
 }
@@ -17,6 +25,7 @@ header{
 .container{
     display: flex;
     justify-content: center;
+    padding-top: 50px;
 }
 
 .display{
@@ -35,11 +44,17 @@ button{
     margin: 0.5rem;
     font-size: calc(1rem * 1.2 * 1.2);
     box-shadow: 10px -10px 3px 1px rgba(3, 3, 3, 0.2);
+    border-radius: 10px;
+    background-color: var(--default-color);
 }
 
 button:hover{
-    background-color: var(--button-color);
     transform: translate3d(-4px, 4px, 20px);
+    border-radius: 10px;
+}
+
+button:active{
+    background-color: var(--button-color);
 }
 
 .btn{
@@ -119,19 +134,32 @@ button:hover{
 .clear{
     grid-area: clear;
     height: 170px;
+    background-color: var(--clear-button-color);
 }
 
 footer{
     font-size: 20px;
-    padding: 1rem;
+    padding-top: 70px;
     text-align: center;
+}
+
+[data-type="operator"]{
+    background-color: var(--operation-button);
+}
+
+.plus:focus, .minus:focus, .multiply:focus, .divide:focus{
+    background-color: var(--button-color);
 }
 
 @media screen and (max-width: 600px) {
     header{
         padding: 0.5rem;
-        font-size: 25px;
+        font-size: 40px;
         font-weight: 600;
+    }
+
+    .container{
+        padding-top: 150px;
     }
 
     button{
@@ -140,12 +168,11 @@ footer{
         margin: 0.25;
     }
 
-    button:focus{
-        background-color: var(--button-color);
-        transform: translate3d(-4px, 4px, 20px);
-    }
-
     .clear{
         height: auto;
+    }
+
+    footer{
+        padding-top: 200px;
     }
 }
