@@ -56,8 +56,8 @@ keys.addEventListener('click', event=> {
 })
 
 function calculate(firstNumber, operator, secondNumber) {
-    firstNumber = parseInt(firstNumber)
-    secondNumber = parseInt(secondNumber)
+    firstNumber = parseFloat(firstNumber)
+    secondNumber = parseFloat(secondNumber)
 
     if (operator === 'plus') {
         return firstNumber + secondNumber
