@@ -46,11 +46,12 @@ button{
     box-shadow: 10px -10px 3px 1px rgba(3, 3, 3, 0.2);
     border-radius: 10px;
     background-color: var(--default-color);
+    border: none;
 }
 
 button:hover{
     transform: translate3d(-4px, 4px, 20px);
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 button:active{
